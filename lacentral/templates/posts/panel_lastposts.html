@@ -1,0 +1,25 @@
+{% block panel_lastposts %}
+    <div class="card mb-3 border-secondary">
+        <h3 class="card-header">Articulos Recientes</h3>
+        {% for post in posts_list %}
+             <div class="card-body">
+                <h5 class="card-title">
+                    <a class="text-muted" href="/posts/{{ post.slug }}">
+                        {{ post.title }}
+                    </a>
+                </h5>
+              </div>
+              <center>
+                <a href="/posts/{{ post.slug }}">
+                    <img style="height: 100px; width: 70%; display: block;" src="{{ post.img_cover.url }}" alt="{{ post.title }}">
+                </a>
+              </center>
+              <div class="card-body">
+                <p class="card-text text-justify">{{ post.summary|truncatechars:140 }} </p>
+              </div>
+              <div class="card-footer text-muted">
+                    {{ post.timestamp|date }} - <strong>{{ post.category }}</strong>
+              </div>
+        {% endfor %}
+    </div>
+{% endblock %}

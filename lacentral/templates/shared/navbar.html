@@ -1,0 +1,43 @@
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">La Central</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-user"></i> Nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-th-list"></i> Articulos<span class="caret"></span></a>
+            <div class="dropdown-menu" aria-labelledby="categorias">
+                {% for category in categories_list %}
+                  <a class="dropdown-item" href="/category/{{ category.slug }}">{{ category.name }}</a>
+                  <div class="dropdown-divider"></div>
+                {% endfor %}
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-leaf"></i> Recetas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-leaf"></i> Provedores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-leaf"></i> Cursos y Talleres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-calendar"></i> Eventos&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar Articulo">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Buscar</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button hidden class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-share-square-o"></i> Contacto</button>
+      </form>
+    </div>
+  </nav>
+{% endblock %}

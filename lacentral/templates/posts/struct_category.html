@@ -1,0 +1,37 @@
+{% block struct_category %}
+    <section>
+        {% include "posts/category_header.html" %} 
+    </section>
+    <section>
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-lg-8">
+                    {% include "posts/article_list.html" %}
+                </div>
+                <div class="col-lg-4" style="padding-left:50px;">
+                    <div class="row">
+                        {% include "posts/panel_subscribe.html" %}
+                        <br>
+                    </div>
+                    <div class="row">
+                        {% include "posts/panel_lastposts.html" %}
+                        <br>
+                    </div>
+                    <div class="row">
+                        {% include "posts/panel_facebook.html" %}
+                        <br>
+                    </div>
+                    <div class="row">
+                        {% include "posts/panel_tags.html" %}
+                        <br>
+                    </div>
+                    <div class="row">
+                        {% include "posts/panel_files.html" %}
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% block category_header %}
+    <header class="masthead-category" style="background-image: url('{{ this_category.img_cover.url }}')">
+        <div class="overlay"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="category-heading">
+                <center>
+                    <br><br><br><br>
+                    <h1>{{ this_category.title }}</h1>
+                    <h3 class="subheading text-justify">{{ this_category.summary }}</h3>
+                    <div hidden class="bounce">
+                        <a href="#article" class="btn btn-secondary my-2 my-sm-0"><i class="fa fa-caret-down"></i>  LEER ARTICULO  <i class="fa fa-caret-down"></i></a>
+                    </div>
+                </center>
+            </div>
+            </div>
+        </div>
+        <div id="article"></div>
+        </div>
+    </header>
+{% endblock %}

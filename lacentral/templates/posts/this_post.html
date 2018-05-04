@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "shared/head_meta_post.html" %}
+        {% include "shared/head_css.html" %} 
+    </head>
+    <body>
+        <script>
+                var percent = 0.74;
+                $('body').loadie(percent); // Insert your percent as params
+        </script>
+        <!---->
+        {% include "shared/navbar.html" %}
+        <!---->
+        {% include "posts/struct_post.html" %}
+        <!---->
+        {% include "shared/footer.html" %} 
+        <!---->
+        {% include "shared/head_js.html" %}  
+    </body>
+</html>
